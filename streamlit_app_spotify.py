@@ -1,7 +1,7 @@
 # streamlit_app_spotify
 
 import streamlit as st 
-from supabase import create_client
+from supabase import create_client, Client
 
 # Load credentials from secrets
 url = st.secrets["supabase"]["SUPABASE_URL"]
