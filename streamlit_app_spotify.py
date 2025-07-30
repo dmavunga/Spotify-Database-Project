@@ -1,14 +1,16 @@
-# streamlit_app_spotify
-import supabase
-
-import streamlit as st 
+import streamlit as st
+import psycopg
 from supabase import create_client, Client
 
-# Load credentials from secrets
-url = st.secrets["supabase"]["SUPABASE_URL"]
-key = st.secrets["supabase"]["SUPABASE_KEY"]
-# Create client
-supabase = create_client(url, key)
-# Example: fetch all rows from "users" table
-data = supabase.table("artist").select("*").execute()
-st.write(data.data)
+
+try:
+    url = st.secrets["supabase"]["SUPABASE_URL"]
+    key = st.secrets["supabase"]["SUPABASE_KEY"]
+except KeyError as e:
+    st.error(f"Missing Supabase secret: {e}")
+    st.stop() 
+
+
+
+import streamlit as st
+import psycopg
