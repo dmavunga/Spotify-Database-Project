@@ -1,4 +1,5 @@
 # streamlit_app_spotify
+import supabase
 
 import streamlit as st 
 from supabase import create_client, Client
