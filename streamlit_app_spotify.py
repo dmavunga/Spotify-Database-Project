@@ -11,3 +11,8 @@ except KeyError as e:
     st.stop() 
 
 
+try:
+    supabase = create_client(url, key)
+except Exception as e:
+    st.error(f"Failed to initialize Supabase client:\n{e}")
+    st.stop()
