@@ -11,6 +11,3 @@ except KeyError as e:
     st.stop() 
 
 
-
-import streamlit as st
-import psycopg
