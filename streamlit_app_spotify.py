@@ -1,5 +1,5 @@
 import streamlit as st
-import psycopg
+import psycopg2
 from supabase import create_client, Client
 
 
