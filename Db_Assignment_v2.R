@@ -34,7 +34,7 @@ shinyApp(ui, server)
 
 library(rsconnect)
 
-# Replace with your shinyapps.io account info from the dashboard
+
 rsconnect::setAccountInfo(name='dmavunga',
                           token='8116AD2685BCBBA30BCE6445D1238D50',
                           secret='P7p8DX8LtoFnGXcJpyYUw8q71upUAYg6D2sz0Rt0')
